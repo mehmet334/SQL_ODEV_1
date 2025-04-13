@@ -5,10 +5,10 @@ FROM film
 GROUP BY title,rating;
 
 --film tablosunda bulunan filmleri replacement_cost sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement_cost değerini ve karşılık gelen film sayısını sıralayınız.
-SELECT replacement_cost, COUNT(*) FROM film
+SELECT replacement_cost, COUNT(*) AS FILM_SAYISI FROM film
 GROUP BY replacement_cost
 HAVING COUNT(*)>50
-ORDER BY replacement_cost DESC;
+ORDER BY FILM_SAYISI DESC;
 
 
 --customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir?
